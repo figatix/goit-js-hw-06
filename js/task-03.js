@@ -31,7 +31,7 @@ const galleryEl = document.querySelector('.gallery')
 
 const arrTags = images.map(({ url, alt }) => {
   return `<li>
-  <img src='${url}' alt='${alt}' width='500' >
+  <img src='${url}' alt='${alt}' width='200' >
 </li>`
 })
 
@@ -39,4 +39,4 @@ const stringTags = arrTags.join('')
 
 galleryEl.insertAdjacentHTML("afterbegin", stringTags)
 
-galleryEl.style = `display: flex; justify-content: space-between; `
+galleryEl.style = `display: flex; justify-content: flex-start; gap: 30px`
