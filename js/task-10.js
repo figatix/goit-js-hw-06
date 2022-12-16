@@ -57,6 +57,8 @@ function destroyBoxes() {
   newBoxes.forEach(element => {
     element.remove()
   });
+
+  boxSize = 30;
 }
 
 function getRandomHexColor() {
