@@ -52,13 +52,13 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-  const newBoxes = document.querySelectorAll('.new-box');
-
-  newBoxes.forEach(element => {
-    element.remove()
-  });
-
+  boxesEl.innerHTML = ''
   boxSize = 30;
+
+  // const newBoxes = document.querySelectorAll('.new-box');
+  // newBoxes.forEach(element => {
+  //   element.remove()
+  // });
 }
 
 function getRandomHexColor() {

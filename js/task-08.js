@@ -31,6 +31,7 @@ function onSendForm(event) {
 
   if (emailInputEl.value.trim() === '' || passwordInputEl.value.trim() === '') {
     alert('Всі поля повинні бути заповнені')
+    return
   }
 
   const {elements: { email, password }} = event.currentTarget;

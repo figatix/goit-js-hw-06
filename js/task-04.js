@@ -17,18 +17,26 @@ const counterValueEl = document.querySelector('#value');
 const decrementBtnEl = document.querySelector('button[data-action="decrement"]')
 const incrementBtnEl = document.querySelector('[data-action="increment"')
 
-counterValueEl.textContent = 0;
+decrementBtnEl.addEventListener('click', onDecrementFn)
+incrementBtnEl.addEventListener('click', onIncrementFn)
 
+let count = 0;
 
 function onDecrementFn(event) {
-  counterValueEl.textContent -= 1;
+  counterValueEl.textContent = `${count -= 1}`;
 }
 
 function onIncrementFn(event) {
-  let total = Number(counterValueEl.textContent) + 1
-  counterValueEl.textContent = total;
+  counterValueEl.textContent = `${count += 1}`;
 }
 
 
-decrementBtnEl.addEventListener('click', onDecrementFn)
-incrementBtnEl.addEventListener('click', onIncrementFn)
+
+// counterValueEl.textContent = 0;
+// function onDecrementFn(event) {
+//   counterValueEl.textContent -= 1;
+// }
+// function onIncrementFn(event) {
+//   let total = Number(counterValueEl.textContent) + 1
+//   counterValueEl.textContent = total;
+// }

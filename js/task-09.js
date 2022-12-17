@@ -22,8 +22,9 @@ const changeBtntEl = document.querySelector('.change-color')
 const spanColorEl = document.querySelector('.color')
 
 function onBgdColorChange(event) {
-  widgetEl.style.backgroundColor = `${getRandomHexColor()}`
-  spanColorEl.textContent = `${getRandomHexColor()}`
+  const colorRndm = getRandomHexColor()
+  widgetEl.style.backgroundColor = `${colorRndm}`
+  spanColorEl.textContent = `${colorRndm}`
 }
 
 changeBtntEl.addEventListener('click', onBgdColorChange)

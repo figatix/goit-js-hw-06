@@ -36,17 +36,22 @@ const ingredients = [
 
 const ingredientsEl = document.querySelector('#ingredients');
 
-const arrayIngredients = []
-
-ingredients.forEach(el => {
+const arrayIngredients = ingredients.map(el => {
   const itemEl = document.createElement('li');
 
   itemEl.innerHTML = `${el}`;
   itemEl.classList.add('item');
-  arrayIngredients.push(itemEl)
+
+  return itemEl
 });
 
 ingredientsEl.append(...arrayIngredients);
+
+
+
+
+
+
 
 
 // const arrayIngredients = ingredients.reduce((acc, el) => {

@@ -36,12 +36,10 @@ function onIsValid(event) {
     inputValidationEl.classList.add('valid')
     inputValidationEl.classList.remove('invalid')
 
-  } else if (inputValidationEl.value.trim() === '') {
-    inputValidationEl.classList.remove('valid')
-    inputValidationEl.classList.remove('invalid')
   } else {
+    inputValidationEl.classList.remove('valid')
     inputValidationEl.classList.add('invalid')
-  }
+  } 
 }
 
 
